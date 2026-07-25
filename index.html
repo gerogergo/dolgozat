@@ -1,91 +1,382 @@
 <!DOCTYPE html>
 <html lang="hu">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Matematika teszt</title>
+<title>Matematika dolgozat</title>
 
 <link rel="stylesheet" href="style.css">
 
-</head>
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+};
+</script>
 
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
 
 <body>
 
-
-<div class="box">
+<div class="container">
 
 <h1>Matematika dolgozat</h1>
 
-<p>
-Add meg a dolgozat kódját:
-</p>
+<p>Egyenletek és függvények</p>
 
+<div class="student">
 
-<input 
-id="testCode"
-placeholder="Pl. EGYENLET9">
+<label>Név:</label>
 
-
-<br><br>
-
-
-<button onclick="startTest()">
-Teszt indítása
-</button>
-
-
-<p id="error"></p>
-
+<input
+type="text"
+id="studentName"
+placeholder="Írd be a neved">
 
 </div>
 
+<hr>
 
-<script src="tests.js"></script>
+<!-- ========================= -->
 
-<script>
+<div class="question">
 
+<h2>1. feladat</h2>
 
-function startTest(){
+<p>
 
+Oldd meg:
 
-let code =
-document.getElementById("testCode").value;
+$$
+x^2-5x+6=0
+$$
 
+</p>
 
-if(tests[code]){
+<label>
 
+<input
+type="radio"
+name="q1"
+value="A">
 
-localStorage.setItem(
-"currentTest",
-code
-);
+A) $x=2,\;3$
 
+</label>
 
-window.location.href="test.html";
+<label>
 
+<input
+type="radio"
+name="q1"
+value="B">
 
-}
+B) $x=-2,\;-3$
 
-else{
+</label>
 
+<label>
 
-document.getElementById("error").innerHTML =
-"Hibás dolgozatkód!";
+<input
+type="radio"
+name="q1"
+value="C">
 
+C) $x=1,\;6$
 
-}
+</label>
 
+<label>
 
-}
+<input
+type="radio"
+name="q1"
+value="D">
 
+D) nincs megoldás
 
+</label>
 
-</script>
+</div>
 
+<hr>
+
+<!-- ========================= -->
+
+<div class="question">
+
+<h2>2. feladat</h2>
+
+<p>
+
+Legyen
+
+$$
+f(x)=2x+3
+$$
+
+Mennyi
+
+$$
+f(4)?
+$$
+
+</p>
+
+<label>
+
+<input
+type="radio"
+name="q2"
+value="A">
+
+A) 7
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="q2"
+value="B">
+
+B) 11
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="q2"
+value="C">
+
+C) 5
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="q2"
+value="D">
+
+D) 8
+
+</label>
+
+</div>
+
+<hr>
+
+<!-- ========================= -->
+
+<div class="question">
+
+<h2>3. feladat</h2>
+
+<p>
+
+Melyik lineáris függvény?
+
+</p>
+
+<label>
+
+<input
+type="radio"
+name="q3"
+value="A">
+
+A) $x^2+1$
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="q3"
+value="B">
+
+B) $2x-5$
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="q3"
+value="C">
+
+C) $\frac1x$
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="q3"
+value="D">
+
+D) $\sqrt{x}$
+
+</label>
+
+</div>
+
+<hr>
+
+<!-- ========================= -->
+
+<div class="question">
+
+<h2>4. feladat</h2>
+
+<p>
+
+Oldd meg:
+
+$$
+3x-9=0
+$$
+
+</p>
+
+<label>
+
+<input
+type="radio"
+name="q4"
+value="A">
+
+A) 2
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="q4"
+value="B">
+
+B) 3
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="q4"
+value="C">
+
+C) 4
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="q4"
+value="D">
+
+D) 5
+
+</label>
+
+</div>
+
+<hr>
+
+<!-- ========================= -->
+
+<div class="question">
+
+<h2>5. feladat</h2>
+
+<p>
+
+Mennyi
+
+$$
+\sqrt{49}
+$$
+
+</p>
+
+<label>
+
+<input
+type="radio"
+name="q5"
+value="A">
+
+A) 5
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="q5"
+value="B">
+
+B) 6
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="q5"
+value="C">
+
+C) 7
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="q5"
+value="D">
+
+D) 8
+
+</label>
+
+</div>
+
+<hr>
+
+<button onclick="checkTest()">
+
+Dolgozat javítása
+
+</button>
+
+<div id="result">
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 
