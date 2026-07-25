@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dolgozat</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- LaTeX támogatás -->
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+
+
+<body>
+
+
+<div class="box">
+
+
+<h1 id="title">
+Dolgozat
+</h1>
+
+
+<h3>
+Hátralévő idő:
+<span id="timer">
+</span>
+</h3>
+
+
+
+<div id="student">
+
+Név:
+
+<input 
+id="name"
+placeholder="Név">
+
+</div>
+
+
+<hr>
+
+
+<form id="testForm">
+
+
+<div id="questions">
+
+</div>
+
+
+<br>
+
+
+<button type="button" onclick="submitTest()">
+
+Beküldés
+
+</button>
+
+
+</form>
+
+
+<div id="result">
+
+</div>
+
+
+</div>
+
+
+
+<script src="tests.js"></script>
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>
