@@ -395,23 +395,70 @@ ${percent}%
 
 
 
-console.log({
+let resultData = {
 
-név:
+
+name:
 document.getElementById("name").value,
 
-teszt:
+
+test:
 currentCode,
 
-válaszok:
-answers,
 
-pont:
-score
+score:
+score,
 
 
-});
+answers:
+answers
+
+
+};
+
+
+
+
+
+fetch(
+"IDE MÁSOLD AZ APPS SCRIPT URL-T",
+{
+
+
+method:"POST",
+
+
+body:
+JSON.stringify(resultData),
+
+
+headers:{
+
+
+"Content-Type":
+"application/json"
+
+
+}
 
 
 
 }
+
+)
+
+.then(response=>{
+
+
+console.log("Elküldve");
+
+
+})
+
+.catch(error=>{
+
+
+console.log(error);
+
+
+});
