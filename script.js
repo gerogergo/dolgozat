@@ -421,7 +421,7 @@ answers
 
 
 fetch(
-"IDE MÁSOLD AZ APPS SCRIPT URL-T",
+https://script.google.com/macros/s/AKfycbzBCklRLQNrlk-ZVdq04iHQcM6h_fqEm9OXidXxrMReBSlbTFtlR9Y3rfjPekgFg0h1/exec,
 {
 
 
